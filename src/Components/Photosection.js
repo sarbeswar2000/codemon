@@ -1,5 +1,7 @@
 import React from "react";
 import image1 from "./image/hd2.jpg";
+import image2 from "./image/hd6.jpg";
+import image3 from "./image/hd4.jpg";
 const Photosection = () => {
   return (
     <section className="container section scrollspy" id="photo">
@@ -22,7 +24,7 @@ const Photosection = () => {
       <div className="row">
         <div className="col s12 l4 push-l7 offset-l1">
           <img
-            src="./image/hd2.jpg"
+            src={image2}
             className="responsive-img materialboxed"
             alt="Photo 2"
           />
@@ -38,7 +40,7 @@ const Photosection = () => {
       <div className="row">
         <div className="col s12 l4">
           <img
-            src="image/hd6.jpg"
+            src={image3}
             className="responsive-img materialboxed"
             alt="Photo 3"
           />

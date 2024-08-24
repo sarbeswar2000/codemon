@@ -9,7 +9,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="nav-wrapper grey darken-4" style={{ height: "56px" }}>
+    <nav className="nav-wrapper grey darken-4" style={{ height: "58px" }}>
       <div className="container">
         <a href="#!" className="brand-logo" style={{ marginRight: "5px" }}>
           CodeMon
@@ -20,10 +20,10 @@ const Navbar = () => {
 
         <ul className="right hide-on-med-and-down">
           <li>
-            <a href="#photo">Photo</a>
+            <a href="#photo">Resources</a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a href="#services">About</a>
           </li>
           <li>
             <a href="#contact">Contact</a>
@@ -49,12 +49,12 @@ const Navbar = () => {
           </li>
           {/* Log-in and New Registration buttons */}
           <li>
-            <button className="btn indigo" style={{ marginLeft: "10px" }}>
+            <button className="btn indigo" style={{ marginLeft: "10px" ,marginBottom:"5px"}}>
               <i className="fa fa-sign-in prefix"></i> LogIn
             </button>
           </li>
           <li>
-            <button className="btn green" style={{ marginLeft: "10px" }}>
+            <button className="btn green" style={{ marginLeft: "10px" ,marginBottom:"5px"}}>
               <i className="fa fa-user-plus prefix"></i> SignUp
             </button>
           </li>
@@ -62,10 +62,10 @@ const Navbar = () => {
 
         <ul className="sidenav gray lighten-2" id="mobile-menu">
           <li>
-            <a href="#photo">Photo</a>
+            <a href="#photo">Resources</a>
           </li>
           <li>
-            <a href="#services">Services</a>
+            <a href="#services">About</a>
           </li>
           <li>
             <a href="#contact">Contact</a>
