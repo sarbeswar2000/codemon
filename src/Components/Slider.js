@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
-
+import image1 from "./image/hd2.jpg";
+import image2 from "./image/hd3.jpg";
+import image3 from "./image/hd6.jpg";
+import image4 from "./image/g.jpg";
 const Slider = () => {
   useEffect(() => {
     // Initialize the slider after the component mounts
@@ -17,28 +20,28 @@ const Slider = () => {
     <div className="slider">
       <ul className="slides">
         <li>
-          <img src="image/hd2.jpg" alt="Slide 1" />
+          <img src={image1} alt="Slide 1" />
           <div className="caption center-align">
             <h3>This is our big Tagline!</h3>
             <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
           </div>
         </li>
         <li>
-          <img src="image/hd1.jpg" alt="Slide 2" />
+          <img src={image2} alt="Slide 2" />
           <div className="caption left-align">
             <h3>Left Aligned Caption</h3>
             <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
           </div>
         </li>
         <li>
-          <img src="image/hd5.jpg" alt="Slide 3" />
+          <img src={image3} alt="Slide 3" />
           <div className="caption right-align">
             <h3>Right Aligned Caption</h3>
             <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
           </div>
         </li>
         <li>
-          <img src="image/hd9.jpg" alt="Slide 4" />
+          <img src={image4} alt="Slide 4" />
           <div className="caption top-align">
             <h3>Top Aligned Caption</h3>
             <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
