@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-
+import logo from "./image/logo.png";
 const Navbar = () => {
   useEffect(() => {
     // Initialize Materialize components
@@ -9,10 +9,15 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="nav-wrapper grey darken-4" style={{ height: "58px" }}>
+    <nav className="nav-wrapper indigo darken-2 " >
       <div className="container">
-        <a href="#!" className="brand-logo" style={{ marginRight: "5px" }}>
-          CodeMon
+     
+          
+       
+        <a href="#!" className="brand-logo " style={{ marginRight: "5px" }}>
+        <img src={logo} height={60} width={70} />
+        
+        <span>CodeMon</span>
         </a>
         <a href="#!" data-target="mobile-menu" className="sidenav-trigger">
           <i className="material-icons">menu</i>
@@ -69,6 +74,16 @@ const Navbar = () => {
           </li>
           <li>
             <a href="#contact">Contact</a>
+          </li>
+          <li>
+            <button className="btn indigo" style={{ marginLeft: "10px" ,marginBottom:"5px"}}>
+              <i className="fa fa-sign-in prefix"></i> LogIn
+            </button>
+          </li>
+          <li>
+            <button className="btn green" style={{ marginLeft: "10px" ,marginBottom:"5px"}}>
+              <i className="fa fa-user-plus prefix"></i> SignUp
+            </button>
           </li>
         </ul>
       </div>

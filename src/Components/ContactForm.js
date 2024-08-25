@@ -25,21 +25,7 @@ const ContactForm = () => {
               <input type="text" id="date" className="datepicker" />
               <label htmlFor="date">Choose a date</label>
             </div>
-            <div className="input-field">
-              <p>Services required...</p>
-              <p>
-                <label>
-                  <input type="checkbox" />
-                  <span>Photography</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input type="checkbox" />
-                  <span>Editing</span>
-                </label>
-              </p>
-            </div>
+            
             <div className="input-field center">
               <button className="btn indigo waves-effect waves-grey" type="submit">Submit</button>
             </div>

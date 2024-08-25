@@ -6,6 +6,7 @@ import ServicesSection from "./Components/ServiceSection";
 import ContactSection from "./Components/ContactSection";
 import Footer from "./Components/Footer";
 import ContactForm from "./Components/ContactForm";
+import Ourjurney from "./Components/Ourjurney";
 
 function App() {
   return (
@@ -13,10 +14,9 @@ function App() {
       <Navbar />
       <Slider />
       <PhotoSection />
+      <Ourjurney/>
       <ServicesSection />
-      <ContactSection />
       <ContactForm/>
-       
       <Footer />
     </div>
   );
