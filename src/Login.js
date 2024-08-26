@@ -1,11 +1,15 @@
 import React from 'react'
 import ServicesSection from './Components/ServiceSection';
 import Photosection from './Components/Photosection';
+import Courses from './Components/Pages/Courses';
+import Slider from './Components/Slider';
+import ContactForm from './Components/ContactForm';
 function Login() {
   return (
     <div>
-  <Photosection />
-      
+      <Slider/>
+     <Courses />
+      <ContactForm/>
     </div>
   )
 }
