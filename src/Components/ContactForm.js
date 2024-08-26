@@ -5,7 +5,7 @@ const ContactForm = () => {
     <section className="section-container scrollspy" id="contact">
       <div className="row">
         <div className="col s12 l5">
-          <h2 className="indigo-text text-darken-4">Get In touch</h2>
+          <h2 className="blue-grey-text ">Get In touch</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div className="col s12 l4 offset-l2">

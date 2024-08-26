@@ -6,7 +6,7 @@ import image3 from "./image/hd4.jpg";
 import "./Ourjurney.css";
 function Ourjurney() {
   return (
-    <section className="section scrollspy #1a237e indigo darken-2 white-text section22" id="photo">
+    <section className="section scrollspy #1a237e indigo darken-2#263238 blue-grey darken-4 white-text section22" id="photo">
       <h2 className=" text-darken-4 center" style={{fontWeight:"bold"}}>Our Journey</h2>
     {/* <hr style={{height:"2px" ,width:
       "700"

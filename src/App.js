@@ -3,20 +3,40 @@ import Navbar from "./Components/Navbar";
 import Slider from "./Components/Slider";
 import PhotoSection from "./Components/Photosection";
 import ServicesSection from "./Components/ServiceSection";
-import ContactSection from "./Components/ContactSection";
+//import ContactSection from "./Components/ContactSection";
 import Footer from "./Components/Footer";
 import ContactForm from "./Components/ContactForm";
 import Ourjurney from "./Components/Ourjurney";
+import JoinClub from "./Components/JoinClub";
+
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Login from "./Login";
+import Howto from "./Howto";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Slider />
-      <PhotoSection />
-      <Ourjurney/>
-      <ServicesSection />
-      <ContactForm/>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Slider />
+                <Howto/>
+                <PhotoSection />
+                <Ourjurney />
+                <ServicesSection />
+                <JoinClub />
+                <ContactForm />
+              </>
+            }
+          />
+          <Route path="/Login" element={<Login />} />
+        </Routes>
+      </Router>
+
       <Footer />
     </div>
   );

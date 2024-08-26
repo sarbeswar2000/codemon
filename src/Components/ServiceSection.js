@@ -5,7 +5,7 @@ const ServicesSection = () => {
     <section className="container section scrollspy" id="services">
       <div className="row">
         <div className="col s12 l4">
-          <h2 className="indigo-text text-darken-4">What I do..</h2>
+          <h2 className="blue-grey-text">What I do..</h2>
           <p>lo ksaijh ijsaiass</p>
           <div class="video-container">
             <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
