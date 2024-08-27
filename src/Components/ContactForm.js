@@ -5,7 +5,7 @@ const ContactForm = () => {
     <section className="section-container scrollspy" id="contact">
       <div className="row">
         <div className="col s12 l5">
-          <h2 className="indigo-text text-darken-4">Get In touch</h2>
+          <h2 className="blue-grey-text ">Get In touch</h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
         <div className="col s12 l4 offset-l2">
@@ -25,21 +25,7 @@ const ContactForm = () => {
               <input type="text" id="date" className="datepicker" />
               <label htmlFor="date">Choose a date</label>
             </div>
-            <div className="input-field">
-              <p>Services required...</p>
-              <p>
-                <label>
-                  <input type="checkbox" />
-                  <span>Photography</span>
-                </label>
-              </p>
-              <p>
-                <label>
-                  <input type="checkbox" />
-                  <span>Editing</span>
-                </label>
-              </p>
-            </div>
+            
             <div className="input-field center">
               <button className="btn indigo waves-effect waves-grey" type="submit">Submit</button>
             </div>

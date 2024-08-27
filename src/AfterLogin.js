@@ -13,7 +13,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Login from "./Login";
 import Howto from "./Howto";
 
-function App() {
+function AfterLogin() {
   return (
     <div>
       <Router>
@@ -42,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default AfterLogin();

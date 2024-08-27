@@ -1,59 +1,74 @@
 import React from "react";
-import image1 from "./image/hd2.jpg";
-import image2 from "./image/hd6.jpg";
-import image3 from "./image/hd4.jpg";
+import image1 from "./image/python.png";
+import image2 from "./image/web.jpg";
+import image3 from "./image/DSA.png";
+import image4 from "./image/c-programming.png";
+import { Link } from "react-router-dom";
 const Photosection = () => {
   return (
-    <section className="container section scrollspy" id="photo">
-      <div className="row">
-        <div className="col s12 l4">
-          <img
-            src={image1}
-            className="materialboxed responsive-img"
-            alt="Photo 1"
-          />
+    <>
+   
+
+    <div >
+    <div class="row">
+    <h2 className="blue-grey-text center" style={{fontWeight:"bold"}}>Courses</h2>
+    <div class="col s6 m3">
+      <a href="#">
+      <div class="card">
+        <div class="card-image">
+          <img src={image1} height={200} width={400}/>
+          
+        
         </div>
-        <div className="col s12 l6 offset-l1">
-          <h2 className="indigo-text text-darken-4">Portraits</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna{" "}
-          </p>
-        </div>
-      </div>
-      <div className="row">
-        <div className="col s12 l4 push-l7 offset-l1">
-          <img
-            src={image2}
-            className="responsive-img materialboxed"
-            alt="Photo 2"
-          />
-        </div>
-        <div className="col s12 l6 pull-l4 right-align">
-          <h2 className="indigo-text text-darken-4">Portraits</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna{" "}
-          </p>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
       </div>
-      <div className="row">
-        <div className="col s12 l4">
-          <img
-            src={image3}
-            className="responsive-img materialboxed"
-            alt="Photo 3"
-          />
+      </a>
+      
+    </div>
+    <div class="col s6 m3">
+      <div class="card">
+        <div class="card-image">
+          <img src={image2}  height={200} width={400}/>
+          
+         
         </div>
-        <div className="col s12 l6 offset-l1">
-          <h2 className="indigo-text text-darken-4">Portraits</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna{" "}
-          </p>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
         </div>
       </div>
-    </section>
+    </div>
+    <div class="col s6 m3">
+      <div class="card">
+        <div class="card-image">
+          <img src={image3}  height={200} width={400}/>
+          
+         
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col s6 m3">
+      <div class="card">
+        <div class="card-image">
+          <img src={image4}  height={200} width={400}/>
+          
+         
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
+    <Link to="/Login" class="btn btn-large #263238 blue-grey darken-4 red-text pulse" style={{marginLeft:"20px", fontWeight:"bold"}}>See More..</Link>
+     {/* <a class="btn  #263238 blue-grey darken-4" style={{marginLeft:"20px"}}>See More..</a> */}
+
+  </div>
+    </div>
+    </>
   );
 };
 
