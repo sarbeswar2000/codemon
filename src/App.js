@@ -6,17 +6,23 @@ import ServicesSection from "./Components/ServiceSection";
 import ContactSection from "./Components/ContactSection";
 import Footer from "./Components/Footer";
 import ContactForm from "./Components/ContactForm";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LoginPage from "./Components/LoginPage";
 function App() {
   return (
     <div>
-      <Navbar />
+      <Router>
+        <Navbar />
+        <Routes>
+        {/* <Route path="/LoginPage" element={<LoginPage />} /> */}
+        </Routes>
+      </Router>
       <Slider />
       <PhotoSection />
       <ServicesSection />
-      <ContactSection />
-      <ContactForm/>
-       
+      
+      <ContactForm />
+
       <Footer />
     </div>
   );

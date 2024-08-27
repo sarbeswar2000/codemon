@@ -1,12 +1,35 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 
 const Navbar = () => {
+  const loginModalRef = useRef(null);
+  const signupModalRef = useRef(null);
+
   useEffect(() => {
     // Initialize Materialize components
     const M = window.M;
     const sidenavElems = document.querySelectorAll(".sidenav");
     M.Sidenav.init(sidenavElems, {});
+
+    // Initialize the modals
+    M.Modal.init(loginModalRef.current);
+    M.Modal.init(signupModalRef.current);
   }, []);
+
+  const openModal1 = () => {
+    const M = window.M;
+    const modalInstance = M.Modal.getInstance(loginModalRef.current);
+    if (modalInstance) {
+      modalInstance.open();
+    }
+  };
+
+  const openModal2 = () => {
+    const M = window.M;
+    const modalInstance = M.Modal.getInstance(signupModalRef.current);
+    if (modalInstance) {
+      modalInstance.open();
+    }
+  };
 
   return (
     <nav className="nav-wrapper grey darken-4" style={{ height: "58px" }}>
@@ -28,7 +51,6 @@ const Navbar = () => {
           <li>
             <a href="#contact">Contact</a>
           </li>
-
           <li>
             <a
               href="#"
@@ -47,14 +69,22 @@ const Navbar = () => {
               <i className="fa fa-whatsapp"></i>
             </a>
           </li>
-          {/* Log-in and New Registration buttons */}
           <li>
-            <button className="btn indigo" style={{ marginLeft: "10px" ,marginBottom:"5px"}}>
+            {/* Log-in Button */}
+            <button
+              className="btn indigo"
+              style={{ marginLeft: "10px", marginBottom: "5px" }}
+              onClick={openModal1}
+            >
               <i className="fa fa-sign-in prefix"></i> LogIn
             </button>
           </li>
           <li>
-            <button className="btn green" style={{ marginLeft: "10px" ,marginBottom:"5px"}}>
+            <button
+              className="btn green"
+              style={{ marginLeft: "10px", marginBottom: "5px" }}
+              onClick={openModal2}
+            >
               <i className="fa fa-user-plus prefix"></i> SignUp
             </button>
           </li>
@@ -70,7 +100,130 @@ const Navbar = () => {
           <li>
             <a href="#contact">Contact</a>
           </li>
+          <li>
+            <button
+              className="btn indigo"
+              style={{ marginLeft: "10px", marginBottom: "5px" }}
+              onClick={openModal1}
+            >
+              <i className="fa fa-sign-in prefix"></i> LogIn
+            </button>
+          </li>
+          <li>
+            <button
+              className="btn green"
+              style={{ marginLeft: "10px", marginBottom: "5px" }}
+              onClick={openModal2}
+            >
+              <i className="fa fa-user-plus prefix"></i> SignUp
+            </button>
+          </li>
         </ul>
+
+        {/* Modal Structure for LogIn */}
+        <div ref={loginModalRef} id="modal1" className="modal text-darken-2">
+          <div className="modal-content blue-text text-darken-2 ">
+            <form>
+              <div className="input-field">
+                <input id="email" type="email" className="validate" required />
+                <label htmlFor="email">Email</label>
+              </div>
+              <div className="input-field">
+                <input
+                  id="password"
+                  type="password"
+                  className="validate"
+                  required
+                />
+                <label htmlFor="password">Password</label>
+              </div>
+              <button type="submit" className="waves-effect waves-light btn">
+                Login
+              </button>
+            </form>
+          </div>
+          <div className="modal-footer">
+            <a
+              href="#!"
+              className="modal-close waves-effect waves-green btn-flat"
+            >
+              Agree
+            </a>
+          </div>
+        </div>
+
+        {/* Modal Structure for SignUp */}
+        <div ref={signupModalRef} id="modal12" className="modal text-darken-2">
+          <div className="modal-content blue-text text-darken-2 ">
+            <form>
+              <div className="input-field">
+                <input
+                  id="signup-name"
+                  type="text"
+                  className="validate"
+                  required
+                />
+                <label htmlFor="signup-name">Name</label>
+              </div>
+              <div className="input-field">
+                <input
+                  id="signup-email"
+                  type="email"
+                  className="validate"
+                  required
+                />
+                <label htmlFor="signup-email">Email</label>
+              </div>
+              <div className="input-field">
+                <input
+                  id="signup-course"
+                  type="text"
+                  className="validate"
+                  required
+                />
+                <label htmlFor="signup-course">Course</label>
+              </div>
+              <div className="input-field">
+                <input
+                  id="signup-rollno"
+                  type="text"
+                  className="validate"
+                  required
+                />
+                <label htmlFor="signup-rollno">Rollno</label>
+              </div>
+              <div className="input-field">
+                <input
+                  id="signup-telephone"
+                  type="tel"
+                  className="validate"
+                  required
+                />
+                <label htmlFor="signup-telephone">Telephone</label>
+              </div>
+              <div className="input-field">
+                <input
+                  id="signup-password"
+                  type="password"
+                  className="validate"
+                  required
+                />
+                <label htmlFor="signup-password">Password</label>
+              </div>
+              <button type="submit" className="waves-effect waves-light btn">
+                SignUp
+              </button>
+            </form>
+          </div>
+          <div className="modal-footer">
+            <a
+              href="#!"
+              className="modal-close waves-effect waves-green btn-flat"
+            >
+              Agree
+            </a>
+          </div>
+        </div>
       </div>
     </nav>
   );
