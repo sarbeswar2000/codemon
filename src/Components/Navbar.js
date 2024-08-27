@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import React, { useEffect, useRef } from "react";
 
+=======
+import React, { useEffect } from "react";
+import logo from "./image/logo.png";
+import { Link } from "react-router-dom";
+>>>>>>> 83e54c35565c0bf199f29a7c5a31e15dc829eaf8
 const Navbar = () => {
   const loginModalRef = useRef(null);
   const signupModalRef = useRef(null);
@@ -32,19 +38,27 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="nav-wrapper grey darken-4" style={{ height: "58px" }}>
+    <nav className="nav-wrapper #263238 blue-grey darken-4">
       <div className="container">
-        <a href="#!" className="brand-logo" style={{ marginRight: "5px" }}>
-          CodeMon
+        <a href="#!" className="brand-logo " style={{ marginRight: "5px" }}>
+          <img src={logo} height={60} width={70} />
+
+          <span>CodeMon</span>
         </a>
         <a href="#!" data-target="mobile-menu" className="sidenav-trigger">
           <i className="material-icons">menu</i>
         </a>
 
         <ul className="right hide-on-med-and-down">
-          <li>
-            <a href="#photo">Resources</a>
+        <li>
+            {/* <a href="#photo">Resources</a> */}
+            <Link to="/">Home</Link>
           </li>
+          <li>
+            {/* <a href="#photo">Resources</a> */}
+            <Link to="/Login">Resources</Link>
+          </li>
+
           <li>
             <a href="#services">About</a>
           </li>
@@ -70,11 +84,17 @@ const Navbar = () => {
             </a>
           </li>
           <li>
+<<<<<<< HEAD
             {/* Log-in Button */}
             <button
               className="btn indigo"
               style={{ marginLeft: "10px", marginBottom: "5px" }}
               onClick={openModal1}
+=======
+            <button
+              className="btn indigo "
+              style={{ marginLeft: "10px", marginBottom: "5px" }}
+>>>>>>> 83e54c35565c0bf199f29a7c5a31e15dc829eaf8
             >
               <i className="fa fa-sign-in prefix"></i> LogIn
             </button>
@@ -83,7 +103,10 @@ const Navbar = () => {
             <button
               className="btn green"
               style={{ marginLeft: "10px", marginBottom: "5px" }}
+<<<<<<< HEAD
               onClick={openModal2}
+=======
+>>>>>>> 83e54c35565c0bf199f29a7c5a31e15dc829eaf8
             >
               <i className="fa fa-user-plus prefix"></i> SignUp
             </button>
@@ -91,6 +114,9 @@ const Navbar = () => {
         </ul>
 
         <ul className="sidenav gray lighten-2" id="mobile-menu">
+        <li>
+            <a href="#photo">Home</a>
+          </li>
           <li>
             <a href="#photo">Resources</a>
           </li>
@@ -104,7 +130,10 @@ const Navbar = () => {
             <button
               className="btn indigo"
               style={{ marginLeft: "10px", marginBottom: "5px" }}
+<<<<<<< HEAD
               onClick={openModal1}
+=======
+>>>>>>> 83e54c35565c0bf199f29a7c5a31e15dc829eaf8
             >
               <i className="fa fa-sign-in prefix"></i> LogIn
             </button>
@@ -113,7 +142,10 @@ const Navbar = () => {
             <button
               className="btn green"
               style={{ marginLeft: "10px", marginBottom: "5px" }}
+<<<<<<< HEAD
               onClick={openModal2}
+=======
+>>>>>>> 83e54c35565c0bf199f29a7c5a31e15dc829eaf8
             >
               <i className="fa fa-user-plus prefix"></i> SignUp
             </button>

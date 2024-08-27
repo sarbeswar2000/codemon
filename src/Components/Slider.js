@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import image1 from "./image/hd2.jpg";
+import image1 from "./image/academic.jpg";
 import image2 from "./image/hd3.jpg";
 import image3 from "./image/hd6.jpg";
 import image4 from "./image/g.jpg";
@@ -10,17 +10,17 @@ const Slider = () => {
     const sliders = document.querySelectorAll('.slider');
     M.Slider.init(sliders, {
       indicators: true,
-      height: 500,
+      height: 400,
       duration: 500,
       interval: 3000
     });
   }, []);
 
   return (
-    <div className="slider">
-      <ul className="slides">
+    <div className="slider" >
+      <ul className="slides" >
         <li>
-          <img src={image1} alt="Slide 1" />
+          <img src={image1} alt="Slide 1"/>
           <div className="caption center-align">
             <h3>This is our big Tagline!</h3>
             <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
