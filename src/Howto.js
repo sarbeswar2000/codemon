@@ -49,4 +49,4 @@ function Howto() {
   )
 }
 
-export default Howto
+export default Howto;

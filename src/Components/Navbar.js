@@ -1,11 +1,9 @@
-<<<<<<< HEAD
+
 import React, { useEffect, useRef } from "react";
 
-=======
-import React, { useEffect } from "react";
 import logo from "./image/logo.png";
 import { Link } from "react-router-dom";
->>>>>>> 83e54c35565c0bf199f29a7c5a31e15dc829eaf8
+
 const Navbar = () => {
   const loginModalRef = useRef(null);
   const signupModalRef = useRef(null);
@@ -56,7 +54,7 @@ const Navbar = () => {
           </li>
           <li>
             {/* <a href="#photo">Resources</a> */}
-            <Link to="/Login">Resources</Link>
+            <Link to="/Resource">Resources</Link>
           </li>
 
           <li>
@@ -84,29 +82,20 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-<<<<<<< HEAD
             {/* Log-in Button */}
             <button
               className="btn indigo"
               style={{ marginLeft: "10px", marginBottom: "5px" }}
               onClick={openModal1}
-=======
-            <button
-              className="btn indigo "
-              style={{ marginLeft: "10px", marginBottom: "5px" }}
->>>>>>> 83e54c35565c0bf199f29a7c5a31e15dc829eaf8
-            >
-              <i className="fa fa-sign-in prefix"></i> LogIn
-            </button>
+            >LogIn</button>
           </li>
           <li>
             <button
               className="btn green"
               style={{ marginLeft: "10px", marginBottom: "5px" }}
-<<<<<<< HEAD
+
               onClick={openModal2}
-=======
->>>>>>> 83e54c35565c0bf199f29a7c5a31e15dc829eaf8
+
             >
               <i className="fa fa-user-plus prefix"></i> SignUp
             </button>
@@ -130,10 +119,9 @@ const Navbar = () => {
             <button
               className="btn indigo"
               style={{ marginLeft: "10px", marginBottom: "5px" }}
-<<<<<<< HEAD
+
               onClick={openModal1}
-=======
->>>>>>> 83e54c35565c0bf199f29a7c5a31e15dc829eaf8
+
             >
               <i className="fa fa-sign-in prefix"></i> LogIn
             </button>
@@ -142,10 +130,8 @@ const Navbar = () => {
             <button
               className="btn green"
               style={{ marginLeft: "10px", marginBottom: "5px" }}
-<<<<<<< HEAD
               onClick={openModal2}
-=======
->>>>>>> 83e54c35565c0bf199f29a7c5a31e15dc829eaf8
+
             >
               <i className="fa fa-user-plus prefix"></i> SignUp
             </button>

@@ -6,40 +6,28 @@ import ServicesSection from "./Components/ServiceSection";
 //import ContactSection from "./Components/ContactSection";
 import Footer from "./Components/Footer";
 import ContactForm from "./Components/ContactForm";
-<<<<<<< HEAD
+
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./Components/LoginPage";
-=======
+
 import Ourjurney from "./Components/Ourjurney";
 import JoinClub from "./Components/JoinClub";
-
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import Login from "./Login";
 import Howto from "./Howto";
+import Resource from "./Components/Resource";
 
->>>>>>> 83e54c35565c0bf199f29a7c5a31e15dc829eaf8
 function App() {
   return (
     <div>
       <Router>
         <Navbar />
         <Routes>
-<<<<<<< HEAD
-        {/* <Route path="/LoginPage" element={<LoginPage />} /> */}
-        </Routes>
-      </Router>
-      <Slider />
-      <PhotoSection />
-      <ServicesSection />
-      
-      <ContactForm />
-=======
+         
           <Route
             path="/"
             element={
               <>
                 <Slider />
-                <Howto/>
+                <Howto />
                 <PhotoSection />
                 <Ourjurney />
                 <ServicesSection />
@@ -48,11 +36,9 @@ function App() {
               </>
             }
           />
-          <Route path="/Login" element={<Login />} />
+          <Route path="/Resource" element={<Resource/>} />
         </Routes>
       </Router>
->>>>>>> 83e54c35565c0bf199f29a7c5a31e15dc829eaf8
-
       <Footer />
     </div>
   );

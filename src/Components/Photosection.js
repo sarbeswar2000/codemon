@@ -7,8 +7,6 @@ import { Link } from "react-router-dom";
 const Photosection = () => {
   return (
     <>
-   
-
     <div >
     <div class="row">
     <h2 className="blue-grey-text center" style={{fontWeight:"bold"}}>Courses</h2>
