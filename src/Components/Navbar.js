@@ -3,6 +3,7 @@ import React, { useEffect, useRef } from "react";
 
 import logo from "./image/logo.png";
 import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 const Navbar = () => {
   const loginModalRef = useRef(null);
@@ -38,11 +39,10 @@ const Navbar = () => {
   return (
     <nav className="nav-wrapper #263238 blue-grey darken-4">
       <div className="container">
-        <a href="#!" className="brand-logo " style={{ marginRight: "5px" }}>
-          <img src={logo} height={60} width={70} />
-
-          <span>CodeMon</span>
-        </a>
+      <a href="#!" className="brand-logo" style={{ display: "flex", alignItems: "center", marginRight: "5px" }}>
+  <img src={logo} alt="Logo" height={60} width={70} style={{ marginRight: "10px" }} />
+  <span>CodeMon</span>
+</a>
         <a href="#!" data-target="mobile-menu" className="sidenav-trigger">
           <i className="material-icons">menu</i>
         </a>
@@ -84,10 +84,10 @@ const Navbar = () => {
           <li>
             {/* Log-in Button */}
             <button
-              className="btn indigo"
+              className="btn indigo "
               style={{ marginLeft: "10px", marginBottom: "5px" }}
               onClick={openModal1}
-            >LogIn</button>
+            ><i className="fa fa-sign-in prefix"></i> LogIn</button>
           </li>
           <li>
             <button
@@ -140,8 +140,9 @@ const Navbar = () => {
 
         {/* Modal Structure for LogIn */}
         <div ref={loginModalRef} id="modal1" className="modal text-darken-2">
-          <div className="modal-content blue-text text-darken-2 ">
+          <div className="modal-content blue-text text-darken-2 center">
             <form>
+              <h2 className="blue-grey-text ">Login</h2>
               <div className="input-field">
                 <input id="email" type="email" className="validate" required />
                 <label htmlFor="email">Email</label>
@@ -155,19 +156,33 @@ const Navbar = () => {
                 />
                 <label htmlFor="password">Password</label>
               </div>
-              <button type="submit" className="waves-effect waves-light btn">
+              <button type="submit" className="btn #263238 blue-grey darken-4 center">
                 Login
               </button>
-            </form>
-          </div>
-          <div className="modal-footer">
+              {/* <a
+              href="#!"
+              className="modal-close btn-flat red white-text" style={{marginLeft:"10px"}}
+            >
+              Cancel
+            </a> */}
+            <div className="modal-footer">
             <a
               href="#!"
-              className="modal-close waves-effect waves-green btn-flat"
+              className="modal-footer blue-text" style={{paddingRight:"110px"}}
             >
-              Agree
+              New User ?
+            </a>
+              <a
+              href="#!"
+              className="modal-footer red-text"
+            >
+              Forget Password ?
             </a>
           </div>
+           
+            </form>
+          </div>
+          
         </div>
 
         {/* Modal Structure for SignUp */}
@@ -238,7 +253,7 @@ const Navbar = () => {
               href="#!"
               className="modal-close waves-effect waves-green btn-flat"
             >
-              Agree
+              Cancel
             </a>
           </div>
         </div>

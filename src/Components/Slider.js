@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import image1 from "./image/academic.jpg";
-import image2 from "./image/hd3.jpg";
-import image3 from "./image/hd6.jpg";
+import image2 from "./image/coding.jpg";
+import image3 from "./image/training.jpg";
 import image4 from "./image/g.jpg";
 const Slider = () => {
   useEffect(() => {
@@ -10,7 +10,7 @@ const Slider = () => {
     const sliders = document.querySelectorAll('.slider');
     M.Slider.init(sliders, {
       indicators: true,
-      height: 400,
+      height: 300,
       duration: 500,
       interval: 3000
     });

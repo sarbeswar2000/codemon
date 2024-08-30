@@ -11,7 +11,7 @@ import JoinClub from "./Components/JoinClub";
 
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import Login from "./Login";
-import Howto from "./Howto";
+import Howto from "./Components/Howto";
 
 function AfterLogin() {
   return (

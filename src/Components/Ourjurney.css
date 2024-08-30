@@ -1,4 +1,59 @@
-.section22{
-  border-radius: 60px;
- 
+.section22 {
+  position: relative;
+  padding-top: 50px;
+  border-radius: 70px;
+}
+
+.journey-container {
+  position: relative;
+}
+
+.journey-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+  opacity: 0;
+  transform: translateX(-50px); /* Start point for fade-in-left */
+  transition: all 0.5s ease-out;
+}
+
+.journey-row.fade-in-left {
+  animation: fadeInLeft 0.5s forwards ease-out;
+}
+
+.journey-row.fade-in-right {
+  animation: fadeInRight 0.5s forwards ease-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.journey-line {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-70%);
+  width: 4px;
+  height: 70%;
+  background-color: #ffffff;
+  
 }

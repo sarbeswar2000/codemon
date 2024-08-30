@@ -17,13 +17,13 @@ const ContactForm = () => {
             </div>
             <div className="input-field">
               <i className="material-icons prefix">message</i>
-              <input type="text" id="message" />
+              <textarea id="textarea2" class="materialize-textarea" ></textarea>
               <label htmlFor="message">Your Message</label>
             </div>
             <div className="input-field">
               <i className="material-icons prefix">date_range</i>
-              <input type="text" id="date" className="datepicker" />
-              <label htmlFor="date">Choose a date</label>
+              <input type="date" id="date" className="datepicker" />
+            
             </div>
             
             <div className="input-field center">

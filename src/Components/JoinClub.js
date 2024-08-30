@@ -6,7 +6,7 @@ function JoinClub() {
     <div className='container '>
       <div className='row center'>
         <h2 style={{color:"#263238", fontWeight:"bold"}}>Join Our Club community</h2>
-        <div className='col s6 offset-m2 l6 '>
+        <div className='col s12 m6 offset-m2 l6 '>
         <div class="card">
           <div class="card-image">
             <img src={img} />
@@ -18,7 +18,7 @@ function JoinClub() {
           
       </div>
         </div>
-        <div className='col s6 '>
+        <div className='col s12 m6 '>
         <div className="card-panel col s12 box1" style={{ display: "flex", alignItems: "center" }}>
           <div className="col s4" style={{ display: "flex", justifyContent: "center" }}>
             <img src={img} alt="" className="responsive-img" style={{ maxWidth: "100%", height: "auto" }} />

@@ -12,10 +12,12 @@ import LoginPage from "./Components/LoginPage";
 
 import Ourjurney from "./Components/Ourjurney";
 import JoinClub from "./Components/JoinClub";
-import Howto from "./Howto";
+import Howto from "./Components/Howto";
 import Resource from "./Components/Resource";
+import ParalexImage from "./Components/ParalexImage";
 
 function App() {
+  
   return (
     <div>
       <Router>
@@ -27,7 +29,9 @@ function App() {
             element={
               <>
                 <Slider />
+                 <ParalexImage/> 
                 <Howto />
+               
                 <PhotoSection />
                 <Ourjurney />
                 <ServicesSection />
