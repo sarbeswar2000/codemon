@@ -23,9 +23,7 @@ const ContactForm = () => {
             <div className="input-field">
               <i className="material-icons prefix">date_range</i>
               <input type="date" id="date" className="datepicker" />
-            
             </div>
-            
             <div className="input-field center">
               <button className="btn indigo waves-effect waves-grey" type="submit">Submit</button>
             </div>

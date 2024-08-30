@@ -52,13 +52,9 @@ function JoinClub() {
               This is a square image. Add the "circle" class to it to make it appear circular.
             </span>
           </div>
-        </div>
-
-       
-        
+        </div> 
         </div>
       </div>
-      
     </div>
   )
 }

@@ -1,7 +1,7 @@
 
 import React, { useEffect, useRef } from "react";
 
-import logo from "./image/logo.png";
+import logo from "./image/CCClogo.png";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
@@ -38,10 +38,10 @@ const Navbar = () => {
 
   return (
     <nav className="nav-wrapper #263238 blue-grey darken-4">
-      <div className="container">
+      <div >
       <a href="#!" className="brand-logo" style={{ display: "flex", alignItems: "center", marginRight: "5px" }}>
   <img src={logo} alt="Logo" height={60} width={70} style={{ marginRight: "10px" }} />
-  <span>CodeMon</span>
+  <span>CUH Coding Club</span>
 </a>
         <a href="#!" data-target="mobile-menu" className="sidenav-trigger">
           <i className="material-icons">menu</i>
@@ -85,14 +85,14 @@ const Navbar = () => {
             {/* Log-in Button */}
             <button
               className="btn indigo "
-              style={{ marginLeft: "10px", marginBottom: "5px" }}
+              style={{ marginLeft: "10px", marginBottom: "5px" , marginRight:"10px" }}
               onClick={openModal1}
             ><i className="fa fa-sign-in prefix"></i> LogIn</button>
           </li>
           <li>
             <button
               className="btn green"
-              style={{ marginLeft: "10px", marginBottom: "5px" }}
+              style={{ marginLeft: "10px", marginBottom: "5px" , marginRight:"10px" }}
 
               onClick={openModal2}
 

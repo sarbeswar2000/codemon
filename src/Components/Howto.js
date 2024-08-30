@@ -2,7 +2,7 @@ import React from 'react'
 import imag2 from "./image/people.png";
 import imag3 from "./image/university.png";
 import imag4 from "./image/resource.png";
-import imag5 from "./image/logok.png";
+import imag5 from "./image/CCCblack.png";
 function Howto() {
   return (
     <>
@@ -40,8 +40,8 @@ function Howto() {
       <div class="col s12 l2 center">
         <img src={imag5} style={{height:80, width:170}}/> 
       
-       <h6  style={{fontWeight:"bold", marginTop:"-2px"}}>CodeMon</h6>
-       Learn code with CodeMon</div>
+       <h6  style={{fontWeight:"bold"}}>CUH Coding Club</h6>
+       Learn code with us</div>
       
     </div>
         </div>
