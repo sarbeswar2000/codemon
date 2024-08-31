@@ -151,7 +151,7 @@ const Signup = () => {
                         />
                         <label htmlFor="signup-password">Password</label>
                     </div>
-                    <button type="submit" className="waves-effect waves-light btn blue-grey darken-4">
+                    <button type="submit" className=" btn blue-grey darken-4">
                         SignUp
                     </button>
                    
@@ -174,7 +174,7 @@ const Signup = () => {
                         />
                         <label htmlFor="otp">Enter OTP</label>
                     </div>
-                    <button type="submit" className="waves-effect waves-light btn blue-grey darken-4">
+                    <button type="submit" className="btn blue-grey darken-4">
                         Verify OTP
                     </button>
                 </form>

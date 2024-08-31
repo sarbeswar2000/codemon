@@ -9,13 +9,18 @@ import ContactForm from "./Components/ContactForm";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Ourjurney from "./Components/Ourjurney";
+import JoinClub from "./Components/JoinClub";
 import Howto from "./Components/Howto";
 import Resource from "./Components/Resource";
+
 import ParalexImage from "./Components/ParalexImage";
-import JoinClub from "./Components/JoinClub";
+
+
+  
+
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
-import Designation from "./Components/Pages/designation";
+import Designation from "./Components/Pages/Designation";
 
 function App() {
   const [userName,setUserName]=useState("");
@@ -26,6 +31,7 @@ function App() {
       setUserName(storedUserName);
     }
   })
+
   return (
     <div>
       <Router>
@@ -36,9 +42,9 @@ function App() {
             element={
               <>
                 <Slider />
-                <ParalexImage/> 
-                <Howto/>
-                <Designation/>
+                 <ParalexImage/> 
+                <Howto />
+                 <Designation/>
                 <PhotoSection />
                 <Ourjurney />
                 <ServicesSection />
