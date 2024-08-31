@@ -1,39 +1,49 @@
 
-import React, { useEffect, useRef } from "react";
 
+import React, { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import logo from "./image/CCClogo.png";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-const Navbar = () => {
-  const loginModalRef = useRef(null);
-  const signupModalRef = useRef(null);
+
+const Navbar = ({userName,setUserName}) => {
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Initialize Materialize components
     const M = window.M;
     const sidenavElems = document.querySelectorAll(".sidenav");
+    const tooltipElems = document.querySelectorAll('.tooltipped');
     M.Sidenav.init(sidenavElems, {});
+    M.Tooltip.init(tooltipElems, {});
 
-    // Initialize the modals
-    M.Modal.init(loginModalRef.current);
-    M.Modal.init(signupModalRef.current);
+   
   }, []);
 
-  const openModal1 = () => {
+  const handleClose = () => {
     const M = window.M;
-    const modalInstance = M.Modal.getInstance(loginModalRef.current);
-    if (modalInstance) {
-      modalInstance.open();
+    const elem = document.querySelector('.sidenav');
+    const instance = M.Sidenav.getInstance(elem);
+    if (instance) {
+      instance.close();
     }
   };
 
-  const openModal2 = () => {
-    const M = window.M;
-    const modalInstance = M.Modal.getInstance(signupModalRef.current);
-    if (modalInstance) {
-      modalInstance.open();
-    }
+  const handleLogout = () => {
+    // Clear user data from localStorage
+    localStorage.removeItem("userName");
+    localStorage.removeItem("authToken");
+
+    // Clear the username state
+    setUserName("");
+
+    // Close the sidenav
+    handleClose();
+
+    // Navigate to the login page or homepage
+    navigate("/Login");
   };
 
   return (
@@ -43,20 +53,18 @@ const Navbar = () => {
   <img src={logo} alt="Logo" height={60} width={70} style={{ marginRight: "10px" }} />
   <span>CUH Coding Club</span>
 </a>
+
         <a href="#!" data-target="mobile-menu" className="sidenav-trigger">
           <i className="material-icons">menu</i>
         </a>
 
         <ul className="right hide-on-med-and-down">
-        <li>
-            {/* <a href="#photo">Resources</a> */}
+          <li>
             <Link to="/">Home</Link>
           </li>
           <li>
-            {/* <a href="#photo">Resources</a> */}
             <Link to="/Resource">Resources</Link>
           </li>
-
           <li>
             <a href="#services">About</a>
           </li>
@@ -81,182 +89,101 @@ const Navbar = () => {
               <i className="fa fa-whatsapp"></i>
             </a>
           </li>
-          <li>
-            {/* Log-in Button */}
-            <button
-              className="btn indigo "
-              style={{ marginLeft: "10px", marginBottom: "5px" , marginRight:"10px" }}
-              onClick={openModal1}
-            ><i className="fa fa-sign-in prefix"></i> LogIn</button>
-          </li>
-          <li>
-            <button
-              className="btn green"
-              style={{ marginLeft: "10px", marginBottom: "5px" , marginRight:"10px" }}
-
-              onClick={openModal2}
-
-            >
-              <i className="fa fa-user-plus prefix"></i> SignUp
-            </button>
-          </li>
+          {userName ? (
+            <>
+              <li>
+                <span style={{color:"red"}}>Hello, {userName}!</span>
+              </li>
+              <li>
+                <button
+                  className="btn indigo"
+                  style={{ marginLeft: "10px", marginBottom: "5px" }}
+                  onClick={handleLogout}
+                >
+                  <i className="fa fa-sign-in prefix"></i> LogOut
+                </button>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link to="/Login">
+                  <button
+                    className="btn indigo"
+                    style={{ marginLeft: "10px", marginBottom: "5px" }}
+                  >
+                    <i className="fa fa-sign-in prefix"></i> LogIn
+                  </button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/Signup">
+                  <button
+                    className="btn green"
+                    style={{ marginLeft: "10px", marginBottom: "5px" }}
+                  >
+                    <i className="fa fa-user-plus prefix"></i> SignUp
+                  </button>
+                </Link>
+              </li>
+            </>
+          )}
         </ul>
 
+        {/* sidenav starts here */}
         <ul className="sidenav gray lighten-2" id="mobile-menu">
-        <li>
-            <a href="#photo">Home</a>
+          <li>
+            <Link to="/" onClick={handleClose}>Home</Link>
           </li>
           <li>
-            <a href="#photo">Resources</a>
+            <Link to="/Resource" onClick={handleClose}>Resources</Link>
           </li>
           <li>
-            <a href="#services">About</a>
+            <a href="#services" onClick={handleClose}>About</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact" onClick={handleClose}>Contact</a>
           </li>
-          <li>
-            <button
-              className="btn indigo"
-              style={{ marginLeft: "10px", marginBottom: "5px" }}
-
-              onClick={openModal1}
-
-            >
-              <i className="fa fa-sign-in prefix"></i> LogIn
-            </button>
-          </li>
-          <li>
-            <button
-              className="btn green"
-              style={{ marginLeft: "10px", marginBottom: "5px" }}
-              onClick={openModal2}
-
-            >
-              <i className="fa fa-user-plus prefix"></i> SignUp
-            </button>
-          </li>
+          {userName ? (
+            <>
+              <li>
+              <span style={{color:"red"}}>Hello, {userName}!</span>
+              </li>
+              <li>
+                <button
+                  className="btn indigo"
+                  style={{ marginLeft: "10px", marginBottom: "5px" }}
+                  onClick={handleLogout}
+                >
+                  <i className="fa fa-sign-in prefix"></i> LogOut
+                </button>
+              </li>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link to="/Login" onClick={handleClose}>
+                  <button
+                    className="btn indigo"
+                    style={{ marginLeft: "10px", marginBottom: "5px" }}
+                  >
+                    <i className="fa fa-sign-in prefix"></i> LogIn
+                  </button>
+                </Link>
+              </li>
+              <li>
+                <Link to="/Signup" onClick={handleClose}>
+                  <button
+                    className="btn green"
+                    style={{ marginLeft: "10px", marginBottom: "5px" }}
+                  >
+                    <i className="fa fa-user-plus prefix"></i> SignUp
+                  </button>
+                </Link>
+              </li>
+            </>
+          )}
         </ul>
-
-        {/* Modal Structure for LogIn */}
-        <div ref={loginModalRef} id="modal1" className="modal text-darken-2">
-          <div className="modal-content blue-text text-darken-2 center">
-            <form>
-              <h2 className="blue-grey-text ">Login</h2>
-              <div className="input-field">
-                <input id="email" type="email" className="validate" required />
-                <label htmlFor="email">Email</label>
-              </div>
-              <div className="input-field">
-                <input
-                  id="password"
-                  type="password"
-                  className="validate"
-                  required
-                />
-                <label htmlFor="password">Password</label>
-              </div>
-              <button type="submit" className="btn #263238 blue-grey darken-4 center">
-                Login
-              </button>
-              {/* <a
-              href="#!"
-              className="modal-close btn-flat red white-text" style={{marginLeft:"10px"}}
-            >
-              Cancel
-            </a> */}
-            <div className="modal-footer">
-            <a
-              href="#!"
-              className="modal-footer blue-text" style={{paddingRight:"110px"}}
-            >
-              New User ?
-            </a>
-              <a
-              href="#!"
-              className="modal-footer red-text"
-            >
-              Forget Password ?
-            </a>
-          </div>
-           
-            </form>
-          </div>
-          
-        </div>
-
-        {/* Modal Structure for SignUp */}
-        <div ref={signupModalRef} id="modal12" className="modal text-darken-2">
-          <div className="modal-content blue-text text-darken-2 ">
-            <form>
-              <div className="input-field">
-                <input
-                  id="signup-name"
-                  type="text"
-                  className="validate"
-                  required
-                />
-                <label htmlFor="signup-name">Name</label>
-              </div>
-              <div className="input-field">
-                <input
-                  id="signup-email"
-                  type="email"
-                  className="validate"
-                  required
-                />
-                <label htmlFor="signup-email">Email</label>
-              </div>
-              <div className="input-field">
-                <input
-                  id="signup-course"
-                  type="text"
-                  className="validate"
-                  required
-                />
-                <label htmlFor="signup-course">Course</label>
-              </div>
-              <div className="input-field">
-                <input
-                  id="signup-rollno"
-                  type="text"
-                  className="validate"
-                  required
-                />
-                <label htmlFor="signup-rollno">Rollno</label>
-              </div>
-              <div className="input-field">
-                <input
-                  id="signup-telephone"
-                  type="tel"
-                  className="validate"
-                  required
-                />
-                <label htmlFor="signup-telephone">Telephone</label>
-              </div>
-              <div className="input-field">
-                <input
-                  id="signup-password"
-                  type="password"
-                  className="validate"
-                  required
-                />
-                <label htmlFor="signup-password">Password</label>
-              </div>
-              <button type="submit" className="waves-effect waves-light btn">
-                SignUp
-              </button>
-            </form>
-          </div>
-          <div className="modal-footer">
-            <a
-              href="#!"
-              className="modal-close waves-effect waves-green btn-flat"
-            >
-              Cancel
-            </a>
-          </div>
-        </div>
       </div>
     </nav>
   );
