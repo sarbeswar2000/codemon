@@ -49,9 +49,9 @@ const Navbar = ({userName,setUserName}) => {
   return (
     <nav className="nav-wrapper #263238 blue-grey darken-4">
       <div >
-      <a href="#!" className="brand-logo" style={{ display: "flex", alignItems: "center", marginRight: "5px" }}>
-  <img src={logo} alt="Logo" height={60} width={70} style={{ marginRight: "10px" }} />
-  <span>CUH Coding Club</span>
+      <a href="#!" className="brand-logo responsive-img" style={{ display: "flex", alignItems: "center", marginRight: "5px" }}>
+  <img src={logo} alt="Logo" height={60} width={70} style={{ marginRight: "10px"  }} />
+  <span style={{fontSize:"30px", fontWeight:"bold"}}>CUH Coding Club</span>
 </a>
 
         <a href="#!" data-target="mobile-menu" className="sidenav-trigger">
@@ -66,7 +66,7 @@ const Navbar = ({userName,setUserName}) => {
             <Link to="/Resource">Resources</Link>
           </li>
           <li>
-            <a href="#services">About</a>
+          <Link to="/Team">Team</Link>
           </li>
           <li>
             <a href="#contact">Contact</a>
@@ -139,7 +139,7 @@ const Navbar = ({userName,setUserName}) => {
             <Link to="/Resource" onClick={handleClose}>Resources</Link>
           </li>
           <li>
-            <a href="#services" onClick={handleClose}>About</a>
+            <Link  to="/Team" onClick={handleClose}>Team</Link>
           </li>
           <li>
             <a href="#contact" onClick={handleClose}>Contact</a>

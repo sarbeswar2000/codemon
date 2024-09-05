@@ -1,6 +1,9 @@
 import React from 'react'
 import "./JoinClube.css";
 import img from "./image/training.jpg";
+import img1 from "./image/free_traning.jpg";
+import img2 from "./image/event.jpg";
+import img3 from "./image/help.jpg";
 function JoinClub() {
   return (
     <div className='container '>
@@ -21,35 +24,35 @@ function JoinClub() {
         <div className='col s12 m6 '>
         <div className="card-panel col s12 box1" style={{ display: "flex", alignItems: "center" }}>
           <div className="col s4" style={{ display: "flex", justifyContent: "center" }}>
-            <img src={img} alt="" className="responsive-img" style={{ maxWidth: "100%", height: "auto" }} />
+            <img src={img1} alt="" className="responsive-img" style={{ maxWidth: "100%", height: "135px" }} />
           </div>
           <div className="col s8">
             <h6 style={{ fontWeight: "bold" }}>Free Training</h6>
             <span className="black-text">
-              This is a square image. Add the "circle" class to it to make it appear circular.
+             Learn how to run a coding club - wherever you are
             </span>
           </div>
         </div>
         <div className="card-panel col s12 box1" style={{ display: "flex", alignItems: "center" }}>
           <div className="col s4" style={{ display: "flex", justifyContent: "center" }}>
-            <img src={img} alt="" className="responsive-img" style={{ maxWidth: "100%", height: "auto" }} />
+            <img src={img2} alt="" className="responsive-img" style={{ maxWidth: "100%", height: "135px" }} />
           </div>
           <div className="col s8">
             <h6 style={{ fontWeight: "bold" }}>Events</h6>
             <span className="black-text">
-              This is a square image. Add the "circle" class to it to make it appear circular.
+              Meet the community at our free meetups and training events
             </span>
           </div>
         </div>
 
         <div className="card-panel col s12 box1" style={{ display: "flex", alignItems: "center" }}>
           <div className="col s4" style={{ display: "flex", justifyContent: "center" }}>
-            <img src={img} alt="" className="responsive-img" style={{ maxWidth: "100%", height: "auto" }} />
+            <img src={img3} alt="" className="responsive-img" style={{ maxWidth: "100%", height: "135px" }} />
           </div>
           <div className="col s8">
             <h6 style={{ fontWeight: "bold" }}>Helps</h6>
             <span className="black-text">
-              This is a square image. Add the "circle" class to it to make it appear circular.
+              FAQs, guidees & everything you ever wanted to know  about Coding Club.
             </span>
           </div>
         </div> 

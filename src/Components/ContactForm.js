@@ -5,11 +5,15 @@ const ContactForm = () => {
     <section className="section-container scrollspy" id="contact">
       <div className="row">
         <div className="col s12 l5">
-          <h2 className="blue-grey-text ">Get In touch</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <div class="video-container center">
+            <iframe width="400" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        
+
         </div>
         <div className="col s12 l4 offset-l2">
           <form>
+          <h2 className="blue-grey-text ">Get In touch</h2>
             <div className="input-field">
               <i className="material-icons prefix">mail</i>
               <input type="email" id="email" />

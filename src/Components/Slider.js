@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import image1 from "./image/academic.jpg";
-import image2 from "./image/coding.jpg";
-import image3 from "./image/training.jpg";
-import image4 from "./image/g.jpg";
+import image1 from "./image/Photo5.png";
+import image2 from "./image/photo2.jpeg";
+import image3 from "./image/Photo4.png";
+import image4 from "./image/Photo3.png";
 const Slider = () => {
   useEffect(() => {
     // Initialize the slider after the component mounts
@@ -10,7 +10,7 @@ const Slider = () => {
     const sliders = document.querySelectorAll('.slider');
     M.Slider.init(sliders, {
       indicators: true,
-      height: 300,
+      height: 400,
       duration: 500,
       interval: 3000
     });
@@ -20,32 +20,32 @@ const Slider = () => {
     <div className="slider" >
       <ul className="slides" >
         <li>
-          <img src={image1} alt="Slide 1"/>
-          <div className="caption center-align">
+          <img src={image1} alt="Slide 1 " className='responsive-img'/>
+          {/* <div className="caption center-align">
             <h3>This is our big Tagline!</h3>
             <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
-          </div>
+          </div> */}
         </li>
         <li>
-          <img src={image2} alt="Slide 2" />
-          <div className="caption left-align">
+          <img src={image2} alt="Slide 2" className='responsive-img' />
+          {/* <div className="caption left-align">
             <h3>Left Aligned Caption</h3>
             <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
-          </div>
+          </div> */}
         </li>
         <li>
-          <img src={image3} alt="Slide 3" />
-          <div className="caption right-align">
+          <img src={image3} alt="Slide 3" className='responsive-img'/>
+          {/* <div className="caption right-align">
             <h3>Right Aligned Caption</h3>
             <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
-          </div>
+          </div> */}
         </li>
         <li>
           <img src={image4} alt="Slide 4" />
-          <div className="caption top-align">
+          {/* <div className="caption top-align">
             <h3>Top Aligned Caption</h3>
             <h5 className="light grey-text text-lighten-3">Here's our small slogan.</h5>
-          </div>
+          </div> */}
         </li>
       </ul>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import image1 from "./image/python.png";
-import image2 from "./image/web.jpg";
+import image2 from "./image/HTML.png";
 import image3 from "./image/DSA.png";
 import image4 from "./image/c-programming.png";
 import { Link } from "react-router-dom";

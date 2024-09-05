@@ -100,7 +100,7 @@ const Login = ({ setUserName }) => {
       <div className="row"> 
       <div className="col s12 m8">
           
-            <img src={image} height={500} width={500} />
+            <img src={image} height={500} width={500} className="responsive-img" />
           
         </div>
        <div className="col s12 m4">
@@ -149,7 +149,6 @@ const Login = ({ setUserName }) => {
              Create one
           </a>
           </p>
-           
           </div>
         </>
       ) : otpSent ? (

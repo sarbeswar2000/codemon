@@ -72,7 +72,7 @@ const Signup = () => {
             <div className='row'>
                 <div className='col s12 m6' > 
                     
-                <img src={img1} height={500} width={500} style={{padding:"20px",marginTop:"20px", paddingRight:"30px"}}/>
+                <img src={img1} height={500} width={500} className='responsive-img' style={{padding:"20px",marginTop:"20px", paddingRight:"30px"}}/>
                 </div>
                 <div className='col s12 m6'>
                 {!isOtpSent ? (
@@ -149,7 +149,7 @@ const Signup = () => {
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
-                        <label htmlFor="signup-password">Password</label>
+                        <label htmlFor="signup-password">Create Password</label>
                     </div>
                     <button type="submit" className=" btn blue-grey darken-4">
                         SignUp
