@@ -20,12 +20,7 @@ import Designation from "./Components/Pages/Designation";
 import PhotoGallery from "./Components/Pages/PhotoGallery";
 
 function App() {
-  const photos = [
-    './image\academic.jpg',
-    'https://via.placeholder.com/400x300?text=Photo+2',
-    'https://via.placeholder.com/400x300?text=Photo+3',
-    'https://via.placeholder.com/400x300?text=Photo+4',
-  ];
+  
   const [userName,setUserName]=useState("");
   useEffect(()=>
   {
@@ -52,7 +47,7 @@ function App() {
                 <PhotoSection />
                 <Ourjurney />
                 <JoinClub />
-                {/* <PhotoGallery photos={photos}/> */}
+  
                 <ContactForm />
               </>
             }

@@ -1,47 +1,63 @@
-import React, { useState } from 'react';
-import './PhotoGallery.css';
+// CarouselComponent.js
+import React, { useState, useEffect } from 'react';
+import imag2 from "../image/Photo3.png";
+import imag3 from "../image/university.png";
+import imag4 from "../image/resource.png";
+import img1 from "../image/e.jpg";
+import img2 from "../image/f.jpg";
+import img3 from "../image/h.jpg";
+import img4 from "../image/hd1.jpg";
+import img5 from "../image/hd2.jpg";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import carousel styles
+import { Carousel } from 'react-responsive-carousel';
 
 const PhotoGallery = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+    const [mounted, setMounted] = useState(false);
 
-  const slides = [
-    { id: 1, imgSrc: 'https://picsum.photos/2000/1000', alt: 'Slide 1' },
-    { id: 2, imgSrc: 'https://picsum.photos/2000/1001', alt: 'Slide 2' },
-    { id: 3, imgSrc: 'https://picsum.photos/2000/1002', alt: 'Slide 3' },
-  ];
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
-  const handleNext = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === slides.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const handlePrev = () => {
-    setActiveIndex((prevIndex) =>
-      prevIndex === 0 ? slides.length - 1 : prevIndex - 1
-    );
-  };
-
-  return (
-    <div className="carousel">
-      {slides.map((slide, index) => (
-        <div
-          key={slide.id}
-          className={`carousel-slide ${index === activeIndex ? 'active' : ''}`}
-        >
-          <img src={slide.imgSrc} alt={slide.alt} />
+    return (
+        <div>
+            {mounted && (
+                <Carousel autoPlay infiniteLoop showThumbs={false}>
+                    <div>
+                        <img src={imag2} alt="Image 1"  />
+                        
+                    </div>
+                    <div>
+                        <img src={imag3} alt="Image 2" />
+                       
+                    </div>
+                    <div>
+                        <img src={img2}alt="Image 3" />
+                        
+                    </div>
+                    <div>
+                        <img src={img1}alt="Image 3" />
+                        
+                    </div>
+                    <div>
+                        <img src={img4}alt="Image 3" />
+                        
+                    </div>
+                    <div>
+                        <img src={img5}alt="Image 3" />
+                        
+                    </div>
+                    <div>
+                        <img src={imag4}alt="Image 3" />
+                        
+                    </div>
+                    <div>
+                        <img src={img3}alt="Image 3" />
+                        
+                    </div>
+                </Carousel>
+            )}
         </div>
-      ))}
-      <div className="carousel-controls">
-        <span className="carousel-arrow" onClick={handlePrev}>
-          &#10094;
-        </span>
-        <span className="carousel-arrow" onClick={handleNext}>
-          &#10095;
-        </span>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default PhotoGallery;
