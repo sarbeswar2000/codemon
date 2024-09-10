@@ -1,68 +1,84 @@
-import React from 'react';
+import React from "react";
+import img1 from "./image/C++.jpg";
 
-import image1 from "./image/hd2.jpg";
-import image2 from "./image/hd6.jpg";
-import image3 from "./image/training.jpg";
-import "./Ourjurney.css";
 
-function OurJourney() {
+import './Ourjurney.css'; // Import the CSS file
+
+const Ourjurney = () => {
+  const timelineData = [
+    {
+      img: img1,
+      title: "2017",
+      period: "2018-2019",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, aperiam ",
+      position: "left",
+    },
+    {
+      img: img1,
+      title: "2018",
+      period: "2019-2020",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, aperiam ",
+      position: "right",
+    },
+    {
+      img: img1,
+      title: "Tesla Inc.",
+      period: "2020-2021",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, aperiam ",
+      position: "left",
+    },
+    {
+      img: img1,
+      title: "Toyota Inc.",
+      period: "2021-2022",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, aperiam ",
+      position: "right",
+    },
+   
+  ];
+
   return (
-    <section className="section scrollspy indigo darken-2 blue-grey darken-4 white-text section22" id="photo">
-      <h2 className="center" style={{ fontWeight: "bold" }}>Our Journey</h2>
-      
-      <div className="journey-container">
-        <div className="row journey-row fade-in-left">
-          <div className="col s12 l4 journey-img">
-            <img
-              src={image3}
-              className="materialboxed responsive-img"
-              alt="Photo 1"
-              height={200}
-              width={300}
-            />
+    <div className="dd">
+      <h2 align="center " style={{color:"white" ,fontWeight:"bold", paddingTop:"30px"}}>Our Journey </h2>
+      <div className="timeline">
+            {timelineData.map((item, index) => (
+              <div
+                key={index}
+                className={`cont ${item.position}-cont `}
+                style={{ animationDelay: `${index}s` }}
+                
+              >
+                <img src={item.img} alt={item.title} />
+                
+                <div className="text-box row ">
+                  <div className="col l8">
+                  <h6>{item.title}</h6>
+                  <small>{item.period}</small>
+                  <p>{item.description}</p>
+                  <span
+                    className={
+                      item.position === "left"
+                        ? "left-cont-arrow"
+                        : "right-cont-arrow"
+                    }
+                  ></span>
+                  </div>
+                  <div className="col l4">
+                    helolk
+                  </div>
+                  
+                  
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="col s12 l6 offset-l1 journey-text">
-            <h4 className="text-darken-4">1st gen</h4>
-            <p>Python is commonly used for developing websites and software, task automation, data analysis, and data visualization.</p>
-          </div>
-        </div>
-
-        <div className="row journey-row fade-in-right">
-          <div className="col s12 l4 journey-img">
-            <img
-              src={image3}
-              className="responsive-img materialboxed"
-              alt="Photo 2"
-              height={200}
-              width={300}
-            />
-          </div>
-          <div className="col s12 l6 offset-l1 journey-text">
-            <h4 className="text-darken-4">2nd Gen</h4>
-            <p>Web development refers to the tasks associated with creating, building, and maintaining websites and web applications.</p>
-          </div>
-        </div>
-
-        <div className="row journey-row fade-in-left">
-          <div className="col s12 l4 journey-img">
-            <img
-              src={image3}
-              className="responsive-img materialboxed"
-              alt="Photo 3"
-              height={200}
-              width={300}
-            />
-          </div>
-          <div className="col s12 l6 offset-l1 journey-text">
-            <h4 className="text-darken-4">3rd Gen</h4>
-            <p>Data Structures and Algorithms (DSA) is a fundamental part of Computer Science that teaches systematic problem-solving.</p>
-          </div>
-        </div>
-      </div>
-
-      <div className="journey-line"></div>
-    </section>
+    </div>
+    
   );
-}
+};
 
-export default OurJourney;
+export default Ourjurney;

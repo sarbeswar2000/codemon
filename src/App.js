@@ -47,7 +47,6 @@ function App() {
                 <PhotoSection />
                 <Ourjurney />
                 <JoinClub />
-  
                 <ContactForm />
               </>
             }
