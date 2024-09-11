@@ -10,11 +10,11 @@ function JoinClub() {
       <div className='row center'>
         <h2 style={{color:"#263238", fontWeight:"bold"}}>Join Our Club community</h2>
         <div className='col s12 m6 offset-m2 l6 '>
-        <div class="card">
-          <div class="card-image">
+        <div className="card">
+          <div className="card-image">
             <img src={img} />
           </div>
-          <div class="card-content #263238 blue-grey darken-4 white-text" >
+          <div className="card-content #263238 blue-grey darken-4 white-text" >
             <p>I am a very simple card. I am good at containing small bits of information.
             I am convenient because I require little markup to use effectively.</p>
           </div>

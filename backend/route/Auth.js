@@ -12,8 +12,8 @@ const transporter = nodemailer.createTransport ({
   service: 'gmail',
    secure:true,
   auth: {
-    user: "sarbeswar58behera@gmail.com",
-    pass: "uqdp xgav gzgv vunb"
+    user: "codingclub@cuh.ac.in",
+    pass: "wayc gypb aswi uzcs"
   }
 });
 
@@ -68,7 +68,7 @@ router.post(
       await OtpEntry.save();
 
       const mailOptions = {
-        from: 'sarbeswar58behera@gmail.com',
+        from: 'codingclub@cuh.ac.in',
         to: req.body.email,
         subject: 'Your OTP for registration',
         text: `Your OTP is ${Otp}`
@@ -222,7 +222,7 @@ router.post(
       await OtpEntry.save();
 
       const mailOptions = {
-        from: "sarbeswar58behera@gmail.com",
+        from: "codingclub@cuh.ac.in",
         to: req.body.email,
         subject: "Your OTP for password reset",
         text: `Your OTP is ${Otp}`,
@@ -339,5 +339,40 @@ router.post(
   }
 );
 
+router.post(
+  '/sendFeedback',
+  [
+    // Validate user input
+    body('name', 'Enter a name with at least 3 characters').isLength({ min: 3 }),
+    body('email', 'Enter a valid email address').isEmail(),
+    body('msg', 'Message cannot be empty').notEmpty(),
+  ],
+  async (req, res) => {
+    // Check for validation errors
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({ errors: errors.array() });
+    }
 
+    // Extract data from request body
+    const { name, email, msg } = req.body;
+
+    // Define email options
+    const mailOptions = {
+      from: email, // Sender's email address
+      to: 'codingclub@cuh.ac.in', // Owner's email address
+      subject: 'Feedback from Coding Club', // Email subject
+      text: `Name: ${name}\nEmail: ${email}\nMessage: ${msg}`, // Email content
+    };
+
+    try {
+      // Send email
+      await transporter.sendMail(mailOptions);
+      res.json({ success: true, message: 'Feedback sent successfully' });
+    } catch (error) {
+      console.error('Error sending feedback:', error.message);
+      res.status(500).json({ success: false, message: 'Error sending feedback' });
+    }
+  }
+);
 module.exports = router;

@@ -16,7 +16,7 @@ import Resource from "./Components/Resource";
 import ParalexImage from "./Components/ParalexImage";
 import Login from "./Components/Login";
 import Signup from "./Components/Signup";
-import Designation from "./Components/Pages/Designation";
+import Designation from "./Components/Pages/designation";
 import PhotoGallery from "./Components/Pages/PhotoGallery";
 
 function App() {

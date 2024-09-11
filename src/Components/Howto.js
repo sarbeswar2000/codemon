@@ -10,34 +10,34 @@ function Howto() {
        <div className="row " style={{ color:"#263238"}}>
         <h4 className="center" style={{fontWeight:"bold"}}> How to work our club</h4>
         <div style={{marginLeft:"50px"}} > 
-        <div class="row" style={{marginTop:"50px"}}>
-      <div class="col s12 l2 center">
+        <div className="row" style={{marginTop:"50px"}}>
+      <div className="col s12 l2 center">
        <img src={imag2} style={{height:70, width:70}}/> 
        <h6 style={{fontWeight:"bold"}}>Enthusiastic people</h6>
        Give one hour a week
       </div>
-      <div class="col s12 l1 center">
+      <div className="col s12 l1 center">
       <span style={{fontSize:"50px",fontWeight:"bold"}}> +</span>
 
        </div>
-      <div class="col s12 l2 center"><img src={imag3} style={{height:70, width:70}}/> 
+      <div className="col s12 l2 center"><img src={imag3} style={{height:70, width:70}}/> 
        <h6  style={{fontWeight:"bold"}}>University</h6>
        Offers space and equipment
        </div>
-       <div class="col s12 l1 center">
+       <div className="col s12 l1 center">
       <span style={{fontSize:"50px",fontWeight:"bold"}}> +</span>
 
        </div>
-      <div class="col s12 l2 center"><img src={imag4} style={{height:70, width:70}}/> 
+      <div className="col s12 l2 center"><img src={imag4} style={{height:70, width:70}}/> 
       
        <h6  style={{fontWeight:"bold"}}>Free resources
        </h6>
        Projects and support from Code Club</div>
-       <div class="col s12 l1 center">
+       <div className="col s12 l1 center">
       <span style={{fontSize:"50px",fontWeight:"bold"}}> =</span>
 
        </div>
-      <div class="col s12 l2 center">
+      <div className="col s12 l2 center">
         <img src={imag5} style={{height:80, width:170}}/> 
       
        <h6  style={{fontWeight:"bold"}}>CUH Coding Club</h6>

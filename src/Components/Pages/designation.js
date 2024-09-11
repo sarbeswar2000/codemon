@@ -15,14 +15,14 @@ function Designation() {
         <h4 style={{padding:"20px", fontWeight:"bold"}}>Club Members</h4>
         <div className='col l1 m12 s12'></div>
         <div className='col l2 m6 s6 white-text center'>
-        <img src={vc} alt="" class="circle responsive-img" height={100} width={90}/>
+        <img src={vc} alt="" className="circle responsive-img" height={100} width={90}/>
         <p>
           
        <span style={{fontWeight:"bold"}}> Prof. (Dr.) Tankeshwar Kumar</span><br/>Vice Chancellor<br/> CUH
         </p>
         </div>
         <div className='col l2 m6 s6 white-text'>
-        <img src={pro_vc} alt="" class="circle responsive-img" height={100} width={90}/>
+        <img src={pro_vc} alt="" className="circle responsive-img" height={100} width={90}/>
         <p>
         <span style={{fontWeight:"bold"}}> Prof. (Dr.) Sushma Yadav</span>
           <br/>
@@ -30,7 +30,7 @@ function Designation() {
         </p>
         </div>
         <div className='col l2 m6 s6 white-text'>
-        <img src={sunil_sir} alt="" class="circle responsive-img" height={100} width={90}/>
+        <img src={sunil_sir} alt="" className="circle responsive-img" height={100} width={90}/>
         <p>
         <span style={{fontWeight:"bold"}}> Dr. Sunil Kumar </span>
 
@@ -42,7 +42,7 @@ function Designation() {
         </p>
         </div>
         <div className='col l2 m6 s6 white-text'>
-        <img src={nitin_sir} alt="" class="circle responsive-img" height={80} width={85}/>
+        <img src={nitin_sir} alt="" className="circle responsive-img" height={80} width={85}/>
         <p>
         <span style={{fontWeight:"bold"}}> Dr. Nitin Goyal </span>
         <br/>
@@ -51,7 +51,7 @@ function Designation() {
         </p>
         </div>
         <div className='col l2 m6 s6 white-text'>
-        <img src={Priti_mam} alt="" class="circle responsive-img" height={80} width={80}/>
+        <img src={Priti_mam} alt="" className="circle responsive-img" height={80} width={80}/>
         <p>
         <span style={{fontWeight:"bold"}}> Dr. Priti Maratha </span>
         <br/>
