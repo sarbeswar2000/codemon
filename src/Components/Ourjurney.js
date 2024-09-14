@@ -1,84 +1,63 @@
 import React from "react";
-import img1 from "./image/C++.jpg";
+import "./Ourjurney.css";
+import { ReactComponent as WorkIcon } from "./work.svg";
+import { ReactComponent as SchoolIcon } from "./school.svg";
 
+import timelineElements from "./TimelineElements";
 
-import './Ourjurney.css'; // Import the CSS file
+import {
+  VerticalTimeline,
+  VerticalTimelineElement
+} from "react-vertical-timeline-component";
 
-const Ourjurney = () => {
-  const timelineData = [
-    {
-      img: img1,
-      title: "2017",
-      period: "2018-2019",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, aperiam ",
-      position: "left",
-    },
-    {
-      img: img1,
-      title: "2018",
-      period: "2019-2020",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, aperiam ",
-      position: "right",
-    },
-    {
-      img: img1,
-      title: "Tesla Inc.",
-      period: "2020-2021",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, aperiam ",
-      position: "left",
-    },
-    {
-      img: img1,
-      title: "Toyota Inc.",
-      period: "2021-2022",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt, aperiam ",
-      position: "right",
-    },
-   
-  ];
+import "react-vertical-timeline-component/style.min.css";
+
+function Ourjurney() {
+  let workIconStyles = { background: "#06D6A0" };
+  let schoolIconStyles = { background: "#f9c74f" };
 
   return (
-    <div className="dd">
-      <h2 align="center " style={{color:"white" ,fontWeight:"bold", paddingTop:"30px"}}>Our Journey </h2>
-      <div className="timeline">
-            {timelineData.map((item, index) => (
-              <div
-                key={index}
-                className={`cont ${item.position}-cont `}
-                style={{ animationDelay: `${index}s` }}
-                
-              >
-                <img src={item.img} alt={item.title} />
-                
-                <div className="text-box row ">
-                  <div className="col l8">
-                  <h6>{item.title}</h6>
-                  <small>{item.period}</small>
-                  <p>{item.description}</p>
-                  <span
-                    className={
-                      item.position === "left"
-                        ? "left-cont-arrow"
-                        : "right-cont-arrow"
-                    }
-                  ></span>
-                  </div>
-                  <div className="col l4">
-                    helolk
-                  </div>
-                  
-                  
-                </div>
-              </div>
-            ))}
-          </div>
+    <div style={{backgroundColor:"#263238"}}>
+      <h1 className="title center">Our Journey</h1>
+      <VerticalTimeline>
+        {timelineElements.map((element) => {
+          let isWorkIcon = element.icon === "work";
+          let showButton =
+            element.buttonText !== undefined &&
+            element.buttonText !== null &&
+            element.buttonText !== "";
+
+          return (
+            <VerticalTimelineElement
+              key={element.key}
+              date={element.date}
+              dateClassName="date"
+              iconStyle={isWorkIcon ? workIconStyles : schoolIconStyles}
+              icon={isWorkIcon ? <WorkIcon /> : <SchoolIcon />}
+            >
+              <h4 className="vertical-timeline-element-title">
+                {element.title}
+              </h4>
+              {/* <h6 className="vertical-timeline-element-subtitle">
+                {element.location}
+              </h6> */}
+              <p id="description">{element.description}</p>
+              {showButton && (
+                <a
+                  className={`button ${
+                    isWorkIcon ? "workButton" : "schoolButton"
+                  }`}
+                  href="/"
+                >
+                  {element.buttonText}
+                </a>
+              )}
+            </VerticalTimelineElement>
+          );
+        })}
+      </VerticalTimeline>
     </div>
-    
   );
-};
+}
 
 export default Ourjurney;

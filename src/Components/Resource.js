@@ -5,9 +5,9 @@ import ContactForm from "./ContactForm";
 function Resource() {
   return (
     <div>
-      {/* <Slider/> */}
+     
      <Courses></Courses>
-      {/* <ContactForm/> */}
+    
     </div>
   )
 }

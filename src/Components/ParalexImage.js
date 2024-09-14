@@ -20,7 +20,7 @@ const ParallaxComponent = () => {
       <div className="parallax ">
         <img src={image1} alt="Parallax Image" />
       </div>
-      <h3  style={{fontWeight:"bold", marginTop:"50px"}}>A Peer-learning community in CUH  </h3>
+      <h4  style={{fontWeight:"bold", marginTop:"55px"}}>A Peer-learning community in Central University of Haryana </h4>
       <h5> Department of CS & IT</h5>
     </div>
   );

@@ -48,7 +48,7 @@ const Navbar = ({ userName, setUserName }) => {
           className="brand-logo responsive-img"
           style={{ display: "flex", alignItems: "center", marginRight: "5px" }}
         >
-          <img src={logo} alt="Logo" height={60} width={70} style={{ marginRight: "10px" }} />
+          <img src={logo} alt="Logo" height={60} width={70} style={{ marginRight: "10px", marginLeft:"20px" }} />
           <span style={{ fontSize: "30px", fontWeight: "bold" }}>CUH Coding Club</span>
         </a>
 
@@ -67,7 +67,9 @@ const Navbar = ({ userName, setUserName }) => {
             <Link to="/Team">Team</Link>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+          <Link to="/ContactForm" onClick={handleClose}>
+              Contact
+            </Link>
           </li>
           <li>
             <a
@@ -80,7 +82,7 @@ const Navbar = ({ userName, setUserName }) => {
           </li>
           <li>
             <a
-              href="https://chat.whatsapp.com/Jql2swXf1NwFtWSfzE5qAg"
+              href="https://chat.whatsapp.com/LC7TMaZYPxxC1iKSvaPWqP"
               className="btn-floating btn-small green darken-2 tooltipped"
               data-tooltip="WhatsApp"
             >
@@ -94,11 +96,11 @@ const Navbar = ({ userName, setUserName }) => {
               </li>
               <li>
                 <button
-                  className="btn indigo"
-                  style={{ marginLeft: "10px", marginBottom: "5px" }}
+                  className="btn red white-text"
+                  style={{ marginLeft: "10px", marginBottom: "5px" ,marginRight:"10px" }}
                   onClick={handleLogout}
                 >
-                  <i className="fa fa-sign-in prefix"></i> LogOut
+                  <i className="fa fa-sign-out prefix"></i> LogOut
                 </button>
               </li>
             </>
@@ -146,10 +148,11 @@ const Navbar = ({ userName, setUserName }) => {
             </Link>
           </li>
           <li>
-            <a href="#contact" onClick={handleClose}>
+          <Link to="/ContactForm" onClick={handleClose}>
               Contact
-            </a>
+            </Link>
           </li>
+         
           {userName ? (
             <>
               <li>
@@ -157,11 +160,11 @@ const Navbar = ({ userName, setUserName }) => {
               </li>
               <li>
                 <button
-                  className="btn indigo"
+                  className="btn red white-text"
                   style={{ marginLeft: "10px", marginBottom: "5px" }}
                   onClick={handleLogout}
                 >
-                  <i className="fa fa-sign-in prefix"></i> LogOut
+                  <i className="fa fa-sign-out prefix"></i> Logout
                 </button>
               </li>
             </>
@@ -189,6 +192,7 @@ const Navbar = ({ userName, setUserName }) => {
               </li>
             </>
           )}
+          
         </ul>
       </div>
     </nav>

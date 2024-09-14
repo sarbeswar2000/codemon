@@ -15,8 +15,8 @@ function JoinClub() {
             <img src={img} />
           </div>
           <div className="card-content #263238 blue-grey darken-4 white-text" >
-            <p>I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.</p>
+            <p>
+            Join our coding club to collaborate on exciting projects, sharpen your coding skills, and learn from fellow enthusiasts. Be part of a supportive and creative community!</p>
           </div>
           
       </div>
@@ -24,7 +24,7 @@ function JoinClub() {
         <div className='col s12 m6 '>
         <div className="card-panel col s12 box1" style={{ display: "flex", alignItems: "center" }}>
           <div className="col s4" style={{ display: "flex", justifyContent: "center" }}>
-            <img src={img1} alt="" className="responsive-img" style={{ maxWidth: "100%", height: "135px" }} />
+            <img src={img1} alt="" className="responsive-img" style={{ maxWidth: "100%", height: "125px" }} />
           </div>
           <div className="col s8">
             <h6 style={{ fontWeight: "bold" }}>Free Training</h6>
@@ -35,7 +35,7 @@ function JoinClub() {
         </div>
         <div className="card-panel col s12 box1" style={{ display: "flex", alignItems: "center" }}>
           <div className="col s4" style={{ display: "flex", justifyContent: "center" }}>
-            <img src={img2} alt="" className="responsive-img" style={{ maxWidth: "100%", height: "135px" }} />
+            <img src={img2} alt="" className="responsive-img" style={{ maxWidth: "100%", height: "125px" }} />
           </div>
           <div className="col s8">
             <h6 style={{ fontWeight: "bold" }}>Events</h6>
@@ -47,7 +47,7 @@ function JoinClub() {
 
         <div className="card-panel col s12 box1" style={{ display: "flex", alignItems: "center" }}>
           <div className="col s4" style={{ display: "flex", justifyContent: "center" }}>
-            <img src={img3} alt="" className="responsive-img" style={{ maxWidth: "100%", height: "135px" }} />
+            <img src={img3} alt="" className="responsive-img" style={{ maxWidth: "100%", height: "125px" }} />
           </div>
           <div className="col s8">
             <h6 style={{ fontWeight: "bold" }}>Helps</h6>

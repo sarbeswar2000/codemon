@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar";
 import Slider from "./Components/Slider";
 import PhotoSection from "./Components/Photosection";
-import ServicesSection from "./Components/ServiceSection";
+
 //import ContactSection from "./Components/ContactSection";
 import Footer from "./Components/Footer";
 import ContactForm from "./Components/ContactForm";
@@ -18,6 +18,7 @@ import Login from "./Components/Login";
 import Signup from "./Components/Signup";
 import Designation from "./Components/Pages/designation";
 import PhotoGallery from "./Components/Pages/PhotoGallery";
+import NewsEvent from "./Components/NewsEvent";
 
 function App() {
   
@@ -43,7 +44,7 @@ function App() {
                  <ParalexImage/> 
                   <Howto />
                  <Designation/>
-                 <ServicesSection />
+                  <NewsEvent/>
                 <PhotoSection />
                 <Ourjurney />
                 <JoinClub />
@@ -55,6 +56,8 @@ function App() {
           <Route path="/Login" element={<Login setUserName={setUserName}/>} />
           <Route path="/Signup" element={<Signup/>} />
           <Route path="/Team" element={<Team/>}/>
+          <Route path="/ContactForm" element={<ContactForm/>}/>
+
         </Routes>
       </Router>
       <Footer />

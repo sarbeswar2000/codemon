@@ -1,6 +1,6 @@
 // ... existing imports
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import image from "./image/login-bro.png";
 
 const Login = ({ setUserName }) => {
@@ -145,9 +145,9 @@ const Login = ({ setUserName }) => {
           <hr/>
           <p>
           Not Account yet ? 
-          <a className="forgot-password-link blue-text" href="#"  onClick={handleOnForgot}>
+          <Link  to="/Signup"className="forgot-password-link blue-text" >
              Create one
-          </a>
+          </Link>
           </p>
           </div>
         </>

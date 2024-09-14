@@ -59,10 +59,10 @@ const ContactForm = () => {
 
             <div className="input-field center">
               <button
-                className="btn indigo waves-effect waves-grey"
+                className="btn blue-grey waves-effect waves-grey"
                 type="submit"
               >
-                Submit
+                Send  <i class="fa fa-paper-plane"></i>
               </button>
             </div>
           </form>

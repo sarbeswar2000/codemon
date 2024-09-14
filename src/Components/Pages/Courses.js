@@ -7,176 +7,45 @@ import image5 from "../image/java.png";
 import image6 from "../image/CSS.jpg";
 import image7 from "../image/javascript.jpeg";
 import image8 from "../image/C++.jpg";
-import image9 from "../image/SQL.jpeg"
-import image10 from "../image/React.png"
-import image11 from "../image/PHP.png"
+import image9 from "../image/SQL.jpeg";
+import image10 from "../image/React.png";
+import image11 from "../image/PHP.png";
+
+const courseData = [
+  { img: image1, description: "Python course details here.", links:"https://drive.google.com/file/d/16FJ4Vn2xjzF1nX6ocCs_AuFL7wOPP2TJ/view" },
+  { img: image2, description: "HTML course details here." ,links:""},
+  { img: image3, description: "DSA course details here." ,links:"https://www.mta.ca/~rrosebru/oldcourse/263114/Dsa.pdf" },
+  { img: image4, description: "C Programming course details here.",links:"" },
+  { img: image5, description: "Java course details here." ,links:""},
+  { img: image6, description: "CSS course details here.",links:"" },
+  { img: image7, description: "JavaScript course details here.",links:"" },
+  { img: image8, description: "C++ course details here." ,links:""},
+  { img: image9, description: "SQL course details here.",links:"" },
+  { img: image10, description: "React course details here." ,links:""},
+  { img: image11, description: "PHP course details here." ,links:""},
+];
+
 const Courses = () => {
   return (
     <>
       <div>
-        <div class="row">
-          <h2 className=" blue-grey-text center" style={{fontWeight:"bold"}}>Courses</h2>
-          <div class="col s6 m3">
-            <a href="#">
-              <div class="card">
-                <div class="card-image">
-                  <img src={image1} height={200} width={400} />
+        <h2 className="blue-grey-text center" style={{ fontWeight: "bold" }}>
+          Courses
+        </h2>
+        <div className="row">
+          {courseData.map((course, index) => (
+            <a href= {course.links}>
+            <div key={index} className="col s6 m3">
+              <div className="card">
+                <div className="card-image">
+                  <img src={course.img} height={200} width={400} alt="course" />
                 </div>
-                <div class="card-content">
-                  <p>
-                    I am a very simple card. I am good at containing small bits
-                    of information. I am convenient because I require little
-                    markup to use effectively.
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col s6 m3">
-            <div class="card">
-              <div class="card-image">
-                <img src={image2} height={200} width={400} />
-              </div>
-              <div class="card-content">
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col s6 m3">
-            <div class="card">
-              <div class="card-image">
-                <img src={image3} height={200} width={400} />
-              </div>
-              <div class="card-content">
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col s6 m3">
-            <div class="card">
-              <div class="card-image">
-                <img src={image4} height={200} width={400} />
-              </div>
-              <div class="card-content">
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-         
-          <div class="col s6 m3">
-            <a href="#">
-              <div class="card">
-                <div class="card-image">
-                  <img src={image5} height={200} width={400} />
-                </div>
-                <div class="card-content">
-                  <p>
-                    I am a very simple card. I am good at containing small bits
-                    of information. I am convenient because I require little
-                    markup to use effectively.
-                  </p>
+                <div className="card-content blue-grey darken-4 white-text">
+                  <p>{course.description}</p>
                 </div>
               </div>
-            </a>
-          </div>
-          <div class="col s6 m3">
-            <div class="card">
-              <div class="card-image">
-                <img src={image6} height={200} width={400} />
-              </div>
-              <div class="card-content">
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col s6 m3">
-            <div class="card">
-              <div class="card-image">
-                <img src={image7} height={200} width={400} />
-              </div>
-              <div class="card-content">
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col s6 m3">
-            <div class="card">
-              <div class="card-image">
-                <img src={image8} height={200} width={400} />
-              </div>
-              <div class="card-content">
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col s6 m3">
-            <div class="card">
-              <div class="card-image">
-                <img src={image9} height={200} width={400} />
-              </div>
-              <div class="card-content">
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col s6 m3">
-            <div class="card">
-              <div class="card-image">
-                <img src={image10} height={200} width={400} />
-              </div>
-              <div class="card-content">
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col s6 m3">
-            <div class="card">
-              <div class="card-image">
-                <img src={image11} height={200} width={400} />
-              </div>
-              <div class="card-content">
-                <p>
-                  I am a very simple card. I am good at containing small bits of
-                  information. I am convenient because I require little markup
-                  to use effectively.
-                </p>
-              </div>
-            </div>
-          </div>
+            </div></a>
+          ))}
         </div>
       </div>
     </>
