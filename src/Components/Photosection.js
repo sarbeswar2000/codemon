@@ -28,7 +28,7 @@ const Photosection = () => {
             Courses
           </h2>
           <div className="col s6 m3">
-            <a href="#">
+       
               <div className="card">
                 <div className="card-image">
                   <img src={image1} height={200} width={400} />
@@ -41,7 +41,7 @@ const Photosection = () => {
                   </p>
                 </div>
               </div>
-            </a>
+            
           </div>
           <div className="col s6 m3">
             <div className="card">
@@ -50,8 +50,7 @@ const Photosection = () => {
               </div>
               <div className="card-content blue-grey darken-4 white-text">
                 <p>
-                  Web development refers to the tasks associated with creating,
-                  building, and maintaining websites and web applications.
+                  Web development refers to the tasks associated with creating, building, and maintaining websites and web  applications.
                 </p>
               </div>
             </div>

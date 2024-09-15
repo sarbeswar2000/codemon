@@ -109,19 +109,19 @@ function Team() {
             </div>
             <div className="col s12 m4 ">
               <div className="card-panel teal  blue-grey">
-                <span className="white-text"><h5>Name</h5>
+                {/* <span className="white-text"><h5>Name</h5>
                 MCA<br/>
                 Batch: 2023-25
-                </span>
+                </span> */}
               </div>
             </div>
             <div className="col s12 m4 ">
               <div className="card-panel teal  blue-grey">
-                <span className="white-text">
+                {/* <span className="white-text">
                 <h5>Name</h5>
                 MCA<br/>
                 Batch: 2023-25
-                </span>
+                </span> */}
               </div>
             
            

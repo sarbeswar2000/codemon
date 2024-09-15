@@ -9,7 +9,7 @@ function Howto() {
         
        <div className="row " style={{ color:"#263238"}}>
         <h4 className="center" style={{fontWeight:"bold"}}> How to work our club</h4>
-        <div style={{marginLeft:"50px"}} > 
+        <div style={{marginLeft:"40px"}} > 
         <div className="row" style={{marginTop:"50px"}}>
       <div className="col s12 l2 center">
        <img src={imag2} style={{height:70, width:70}}/> 

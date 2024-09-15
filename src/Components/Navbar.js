@@ -43,14 +43,15 @@ const Navbar = ({ userName, setUserName }) => {
   return (
     <nav className="nav-wrapper #263238 blue-grey darken-4">
       <div>
-        <a
+              <a
           href="#!"
           className="brand-logo responsive-img"
-          style={{ display: "flex", alignItems: "center", marginRight: "5px" }}
+          style={{ display: "flex", alignItems: "center", marginRight: "5px",marginTop:"5px" }}
         >
           <img src={logo} alt="Logo" height={60} width={70} style={{ marginRight: "10px", marginLeft:"20px" }} />
-          <span style={{ fontSize: "30px", fontWeight: "bold" }}>CUH Coding Club</span>
+          <span className="hide-on-mobile" style={{ fontSize: "30px", fontWeight: "bold" }}>CUH Coding Club</span>
         </a>
+
 
         <a href="#!" data-target="mobile-menu" className="sidenav-trigger">
           <i className="material-icons">menu</i>
@@ -131,24 +132,24 @@ const Navbar = ({ userName, setUserName }) => {
         </ul>
 
         {/* sidenav starts here */}
-        <ul className="sidenav gray lighten-2" id="mobile-menu">
+        <ul className="sidenav blue-grey darken-4 " id="mobile-menu" >
           <li>
-            <Link to="/" onClick={handleClose}>
+            <Link to="/" onClick={handleClose} className="white-text" >
               Home
             </Link>
           </li>
           <li>
-            <Link to="/Resource" onClick={handleResourceAccess}>
+            <Link to="/Resource" onClick={handleResourceAccess} className="white-text">
               Resources
             </Link>
           </li>
           <li>
-            <Link to="/Team" onClick={handleClose}>
+            <Link to="/Team" onClick={handleClose} className="white-text">
               Team
             </Link>
           </li>
           <li>
-          <Link to="/ContactForm" onClick={handleClose}>
+          <Link to="/ContactForm" onClick={handleClose} className="white-text">
               Contact
             </Link>
           </li>

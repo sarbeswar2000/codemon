@@ -12,9 +12,9 @@ const Footer = () => {
         <p>
         CUH coding club (CCC) is a community where individuals with a shared interest in programming come together to collaborate, learn, and improve their skills. Members work on projects, solve coding challenges, and explore new technologies.
         </p>
-         <p>This website is design & developed by Our club Students Batch-2023 <br/>
-          Sohel Aktar- MCA (FrontEnd)<br/>
-          Sarbeswar Behera- MCA (BackEnd) </p>
+         <p>This website was designed and developed by students from  our club, Batch of 2023: <br/>
+          Sohel Aktar (MCA)<br/>
+          Sarbeswar Behera (MCA) </p>
         </div>
 
          <div className="col s12 l4 offset-l2 ">
@@ -28,7 +28,7 @@ const Footer = () => {
               <br/>
               <li><i className="fa fa-youtube-play left btn-floating red darken-4 btn-small"></i><a href="#!" className="grey-text text-lighten-3">Youtube</a></li>
               <br/>
-              Email:codingclub@cuh.ac.in
+              Email:<a href='https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=codingclub@cuh.ac.in' target='_blank'> codingclub@cuh.ac.in</a>
           </ul>
         </div> 
     

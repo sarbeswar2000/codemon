@@ -193,8 +193,9 @@ const Login = ({ setUserName }) => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
+              placeholder="Enter Registered Email"
             />
-            <label htmlFor="email">Enter registered email</label>
+           
           </div>
           <button type="submit" className=" blue-grey darken-4 btn">
             Reset your password
