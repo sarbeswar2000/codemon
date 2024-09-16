@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (  
     <footer className="page-footer blue-grey darken-3">
   
@@ -13,7 +14,7 @@ const Footer = () => {
         CUH coding club (CCC) is a community where individuals with a shared interest in programming come together to collaborate, learn, and improve their skills. Members work on projects, solve coding challenges, and explore new technologies.
         </p>
          <p>This website was designed and developed by students from  our club, Batch of 2023: <br/>
-          Sohel Aktar (MCA)<br/>
+          Sohel Aktar (MCA),
           Sarbeswar Behera (MCA) </p>
         </div>
 
@@ -37,7 +38,7 @@ const Footer = () => {
 
     <div className="footer-copyright blue-grey darken-4">
 
-      <div className="container center align">&copy;2024 CUH Coding Club</div>
+      <div className="container center align">&copy;{currentYear} CUH Coding Club</div>
     </div> 
     </footer>
   );

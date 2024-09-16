@@ -13,9 +13,9 @@ const NewsEvent = () => {
           <div className="scroll" style={{ marginBottom: '10px' }}>
             <ul style={{ lineHeight: '300%' }}>
               {[
-                {des:'Our upcoming event: Web Development Course Bootscamp coming soon 25-09-24 click for registration',lnk:"https://docs.google.com/forms/d/e/1FAIpQLSeTsiQGlYYM_0xE5GSUQs6taAGawg49i24iUbFtJwvFx9b0vw/closedform" },
+                {des:'Join our Web Development Workshop starting on August 30, 2024! Registration is now open—secure your spot today!',lnk:"https://docs.google.com/forms/d/e/1FAIpQLSeTsiQGlYYM_0xE5GSUQs6taAGawg49i24iUbFtJwvFx9b0vw/closedform" },
                  {
-                  des:' Python BootsCamp Coming Soon Click For Registration',
+                  des:" Join our Python Bootcamp starting on August 30, 2024! Registration is open now — don't miss your chance to master Python!",
                   lnk:"#!"
                  }
               ].map((text, index) => (
