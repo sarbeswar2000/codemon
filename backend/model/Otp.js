@@ -41,11 +41,7 @@ const OtpSchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-    expires: 300, // The document will automatically be removed after 5 minutes
-  },
+  createdAt: { type: Date, default: Date.now, expires:5 },
 });
 
 module.exports = mongoose.model("OTP", OtpSchema);
